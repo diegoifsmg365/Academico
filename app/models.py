@@ -152,7 +152,7 @@ class Frequencia(models.Model):
     numero_faltas = models.IntegerField(verbose_name="Número de Faltas")
 
     def __str__(self):
-        return self.numero_faltas
+        return str(self.pessoa)
 
     class Meta:
         verbose_name = "Frequência"
@@ -192,7 +192,7 @@ class CursoDisciplina(models.Model):
     periodo = models.CharField(max_length=100, verbose_name="Período")
 
     def __str__(self):
-        return self.disciplina
+        return str(self.disciplina)
     
     class Meta:
         verbose_name = "Curso Disciplina"
